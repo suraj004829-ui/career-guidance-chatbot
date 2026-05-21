@@ -1,9 +1,10 @@
-from crewai import Agent, LLM
+from crewai import Agent
+from langchain_groq import ChatGroq
 import os
 
-llm = LLM(
-    model="groq/llama3-8b-8192",
-    api_key=os.getenv("GROQ_API_KEY")
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama3-8b-8192"
 )
 
 profile_analyzer = Agent(
