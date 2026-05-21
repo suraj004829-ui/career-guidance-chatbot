@@ -1,0 +1,6 @@
+streamlit
+crewai==0.28.8
+langchain
+groq
+litellm
+pydantic==2.7.1
